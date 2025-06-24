@@ -1,0 +1,16 @@
+[
+  {
+    "DateCreated": "22-06-2025",
+    "DateEdited": "22-06-2025",
+    "Name": "sapscrime.db.zip",
+    "Url": "https://raw.githubusercontent.com/xyclone-designs/database.sapscrime/refs/heads/main/.output/sapscrime.db.zip",
+    "Description": "individual zipped SAPS crime stats database"
+  },
+  {
+    "DateCreated": "22-06-2025",
+    "DateEdited": "22-06-2025",
+    "Name": "sapscrime.db.gz",
+    "Url": "https://raw.githubusercontent.com/xyclone-designs/database.sapscrime/refs/heads/main/.output/sapscrime.db.gz",
+    "Description": "individual g-zipped SAPS crime stats database"
+  }
+]

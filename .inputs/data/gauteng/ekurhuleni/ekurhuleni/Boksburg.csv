@@ -1,0 +1,693 @@
+year,category,value
+2024,Abduction,0
+2024,Arson,0
+2024,Assault with the intent to inflict grievous bodily harm,168
+2024,Attempted murder,35
+2024,Attempted sexual offences,1
+2024,Bank robbery,0
+2024,Burglary at non-residential premises,101
+2024,Burglary at residential premises,226
+2024,Carjacking,86
+2024,Commercial crime,367
+2024,Common assault,304
+2024,Common robbery,73
+2024,Contact sexual offences,2
+2024,Crimen Injuria,0
+2024,Culpable homicide,0
+2024,Driving under the influence of alcohol or drugs,81
+2024,Drug-related crime,197
+2024,Illegal possession of firearms and ammunition,14
+2024,Kidnapping,56
+2024,Malicious damage to property,218
+2024,Murder,48
+2024,Neglect and ill-treatment of children,0
+2024,Public violence,0
+2024,Rape,36
+2024,Robbery at non-residential premises,27
+2024,Robbery at residential premises,35
+2024,Robbery of cash in transit,0
+2024,Robbery with aggravating circumstances,318
+2024,Sexual Offences detected as a result of police action,1
+2024,Sexual assault,16
+2024,Shoplifting,82
+2024,Stock-theft,0
+2024,Street Robbery,167
+2024,TRIO crimes,148
+2024,Theft of motor vehicle and motorcycle,181
+2024,Theft out of or from motor vehicle,217
+2024,Truck hijacking,19
+2023,Abduction,0
+2023,Arson,5
+2023,Assault with the intent to inflict grievous bodily harm,146
+2023,Attempted murder,26
+2023,Attempted sexual offences,0
+2023,Bank robbery,0
+2023,Burglary at non-residential premises,122
+2023,Burglary at residential premises,255
+2023,Carjacking,59
+2023,Commercial crime,331
+2023,Common assault,265
+2023,Common robbery,78
+2023,Contact sexual offences,0
+2023,Crimen Injuria,0
+2023,Culpable homicide,0
+2023,Driving under the influence of alcohol or drugs,77
+2023,Drug-related crime,140
+2023,Illegal possession of firearms and ammunition,16
+2023,Kidnapping,63
+2023,Malicious damage to property,219
+2023,Murder,43
+2023,Neglect and ill-treatment of children,0
+2023,Public violence,0
+2023,Rape,34
+2023,Robbery at non-residential premises,43
+2023,Robbery at residential premises,29
+2023,Robbery of cash in transit,0
+2023,Robbery with aggravating circumstances,282
+2023,Sexual Offences detected as a result of police action,0
+2023,Sexual assault,18
+2023,Shoplifting,87
+2023,Stock-theft,0
+2023,Street Robbery,130
+2023,TRIO crimes,131
+2023,Theft of motor vehicle and motorcycle,185
+2023,Theft out of or from motor vehicle,254
+2023,Truck hijacking,21
+2022,Abduction,0
+2022,Arson,2
+2022,Assault with the intent to inflict grievous bodily harm,145
+2022,Attempted murder,20
+2022,Attempted sexual offences,0
+2022,Bank robbery,0
+2022,Burglary at non-residential premises,89
+2022,Burglary at residential premises,179
+2022,Carjacking,51
+2022,Commercial crime,278
+2022,Common assault,240
+2022,Common robbery,79
+2022,Contact sexual offences,1
+2022,Crimen Injuria,0
+2022,Culpable homicide,0
+2022,Driving under the influence of alcohol or drugs,62
+2022,Drug-related crime,93
+2022,Illegal possession of firearms and ammunition,6
+2022,Kidnapping,17
+2022,Malicious damage to property,230
+2022,Murder,41
+2022,Neglect and ill-treatment of children,0
+2022,Public violence,0
+2022,Rape,34
+2022,Robbery at non-residential premises,37
+2022,Robbery at residential premises,37
+2022,Robbery of cash in transit,0
+2022,Robbery with aggravating circumstances,239
+2022,Sexual Offences detected as a result of police action,0
+2022,Sexual assault,18
+2022,Shoplifting,73
+2022,Stock-theft,0
+2022,Street Robbery,104
+2022,TRIO crimes,125
+2022,Theft of motor vehicle and motorcycle,140
+2022,Theft out of or from motor vehicle,282
+2022,Truck hijacking,10
+2021,Abduction,0
+2021,Arson,8
+2021,Assault with the intent to inflict grievous bodily harm,148
+2021,Attempted murder,33
+2021,Attempted sexual offences,2
+2021,Bank robbery,0
+2021,Burglary at non-residential premises,116
+2021,Burglary at residential premises,215
+2021,Carjacking,39
+2021,Commercial crime,255
+2021,Common assault,246
+2021,Common robbery,61
+2021,Contact sexual offences,1
+2021,Crimen Injuria,17
+2021,Culpable homicide,26
+2021,Driving under the influence of alcohol or drugs,51
+2021,Drug-related crime,92
+2021,Illegal possession of firearms and ammunition,9
+2021,Kidnapping,8
+2021,Malicious damage to property,198
+2021,Murder,25
+2021,Neglect and ill-treatment of children,4
+2021,Public violence,5
+2021,Rape,29
+2021,Robbery at non-residential premises,41
+2021,Robbery at residential premises,46
+2021,Robbery of cash in transit,1
+2021,Robbery with aggravating circumstances,231
+2021,Sexual Offences detected as a result of police action,3
+2021,Sexual assault,9
+2021,Shoplifting,80
+2021,Stock-theft,0
+2021,Street Robbery,93
+2021,TRIO crimes,126
+2021,Theft of motor vehicle and motorcycle,203
+2021,Theft out of or from motor vehicle,252
+2021,Truck hijacking,11
+2020,Abduction,0
+2020,Arson,1
+2020,Assault with the intent to inflict grievous bodily harm,151
+2020,Attempted murder,33
+2020,Attempted sexual offences,1
+2020,Bank robbery,0
+2020,Burglary at non-residential premises,154
+2020,Burglary at residential premises,352
+2020,Carjacking,37
+2020,Commercial crime,240
+2020,Common assault,263
+2020,Common robbery,99
+2020,Contact sexual offences,0
+2020,Crimen Injuria,20
+2020,Culpable homicide,15
+2020,Driving under the influence of alcohol or drugs,140
+2020,Drug-related crime,214
+2020,Illegal possession of firearms and ammunition,9
+2020,Kidnapping,10
+2020,Malicious damage to property,255
+2020,Murder,40
+2020,Neglect and ill-treatment of children,1
+2020,Public violence,5
+2020,Rape,64
+2020,Robbery at non-residential premises,54
+2020,Robbery at residential premises,84
+2020,Robbery of cash in transit,0
+2020,Robbery with aggravating circumstances,373
+2020,Sexual Offences detected as a result of police action,0
+2020,Sexual assault,13
+2020,Shoplifting,137
+2020,Stock-theft,0
+2020,Street Robbery,195
+2020,TRIO crimes,175
+2020,Theft of motor vehicle and motorcycle,229
+2020,Theft out of or from motor vehicle,340
+2020,Truck hijacking,3
+2019,Abduction,1
+2019,Arson,5
+2019,Assault with the intent to inflict grievous bodily harm,171
+2019,Attempted murder,31
+2019,Attempted sexual offences,1
+2019,Bank robbery,0
+2019,Burglary at non-residential premises,147
+2019,Burglary at residential premises,335
+2019,Carjacking,30
+2019,Commercial crime,270
+2019,Common assault,219
+2019,Common robbery,95
+2019,Contact sexual offences,3
+2019,Crimen Injuria,19
+2019,Culpable homicide,25
+2019,Driving under the influence of alcohol or drugs,89
+2019,Drug-related crime,268
+2019,Illegal possession of firearms and ammunition,8
+2019,Kidnapping,11
+2019,Malicious damage to property,286
+2019,Murder,44
+2019,Neglect and ill-treatment of children,2
+2019,Public violence,2
+2019,Rape,44
+2019,Robbery at non-residential premises,45
+2019,Robbery at residential premises,101
+2019,Robbery of cash in transit,0
+2019,Robbery with aggravating circumstances,315
+2019,Sexual Offences detected as a result of police action,1
+2019,Sexual assault,14
+2019,Shoplifting,80
+2019,Stock-theft,0
+2019,Street Robbery,134
+2019,TRIO crimes,176
+2019,Theft of motor vehicle and motorcycle,359
+2019,Theft out of or from motor vehicle,351
+2019,Truck hijacking,5
+2018,Abduction,0
+2018,Arson,3
+2018,Assault with the intent to inflict grievous bodily harm,122
+2018,Attempted murder,26
+2018,Attempted sexual offences,3
+2018,Bank robbery,0
+2018,Burglary at non-residential premises,94
+2018,Burglary at residential premises,360
+2018,Carjacking,55
+2018,Commercial crime,193
+2018,Common assault,212
+2018,Common robbery,78
+2018,Contact sexual offences,1
+2018,Crimen Injuria,16
+2018,Culpable homicide,15
+2018,Driving under the influence of alcohol or drugs,66
+2018,Drug-related crime,194
+2018,Illegal possession of firearms and ammunition,12
+2018,Kidnapping,12
+2018,Malicious damage to property,282
+2018,Murder,42
+2018,Neglect and ill-treatment of children,2
+2018,Public violence,2
+2018,Rape,42
+2018,Robbery at non-residential premises,49
+2018,Robbery at residential premises,75
+2018,Robbery of cash in transit,0
+2018,Robbery with aggravating circumstances,325
+2018,Sexual Offences detected as a result of police action,1
+2018,Sexual assault,13
+2018,Shoplifting,108
+2018,Stock-theft,1
+2018,Street Robbery,141
+2018,TRIO crimes,179
+2018,Theft of motor vehicle and motorcycle,271
+2018,Theft out of or from motor vehicle,355
+2018,Truck hijacking,5
+2017,Abduction,0
+2017,Arson,2
+2017,Assault with the intent to inflict grievous bodily harm,132
+2017,Attempted murder,33
+2017,Attempted sexual offences,0
+2017,Bank robbery,0
+2017,Burglary at non-residential premises,157
+2017,Burglary at residential premises,441
+2017,Carjacking,32
+2017,Commercial crime,217
+2017,Common assault,214
+2017,Common robbery,71
+2017,Contact sexual offences,0
+2017,Crimen Injuria,18
+2017,Culpable homicide,18
+2017,Driving under the influence of alcohol or drugs,42
+2017,Drug-related crime,145
+2017,Illegal possession of firearms and ammunition,13
+2017,Kidnapping,9
+2017,Malicious damage to property,279
+2017,Murder,37
+2017,Neglect and ill-treatment of children,0
+2017,Public violence,4
+2017,Rape,45
+2017,Robbery at non-residential premises,42
+2017,Robbery at residential premises,72
+2017,Robbery of cash in transit,0
+2017,Robbery with aggravating circumstances,323
+2017,Sexual Offences detected as a result of police action,11
+2017,Sexual assault,17
+2017,Shoplifting,74
+2017,Stock-theft,0
+2017,Street Robbery,171
+2017,TRIO crimes,146
+2017,Theft of motor vehicle and motorcycle,292
+2017,Theft out of or from motor vehicle,303
+2017,Truck hijacking,6
+2016,Arson,11
+2016,Assault with the intent to inflict grievous bodily harm,180
+2016,Attempted murder,30
+2016,Attempted sexual offences,3
+2016,Bank robbery,0
+2016,Burglary at non-residential premises,117
+2016,Burglary at residential premises,547
+2016,Carjacking,37
+2016,Commercial crime,212
+2016,Common assault,223
+2016,Common robbery,113
+2016,Contact sexual offences,2
+2016,Crimen Injuria,0
+2016,Culpable homicide,0
+2016,Driving under the influence of alcohol or drugs,84
+2016,Drug-related crime,157
+2016,Illegal possession of firearms and ammunition,26
+2016,Kidnapping,7
+2016,Malicious damage to property,221
+2016,Murder,42
+2016,Neglect and ill-treatment of children,0
+2016,Public violence,0
+2016,Rape,40
+2016,Robbery at non-residential premises,68
+2016,Robbery at residential premises,80
+2016,Robbery of cash in transit,0
+2016,Robbery with aggravating circumstances,353
+2016,Sexual Offences detected as a result of police action,3
+2016,Sexual assault,8
+2016,Shoplifting,38
+2016,Stock-theft,0
+2016,Street Robbery,167
+2016,TRIO crimes,185
+2016,Theft of motor vehicle and motorcycle,336
+2016,Theft out of or from motor vehicle,338
+2016,Truck hijacking,1
+2015,Arson,7
+2015,Assault with the intent to inflict grievous bodily harm,145
+2015,Attempted murder,20
+2015,Attempted sexual offences,0
+2015,Bank robbery,0
+2015,Burglary at non-residential premises,98
+2015,Burglary at residential premises,460
+2015,Carjacking,42
+2015,Commercial crime,158
+2015,Common assault,241
+2015,Common robbery,92
+2015,Contact sexual offences,2
+2015,Crimen Injuria,27
+2015,Culpable homicide,18
+2015,Driving under the influence of alcohol or drugs,81
+2015,Drug-related crime,245
+2015,Illegal possession of firearms and ammunition,21
+2015,Kidnapping,11
+2015,Malicious damage to property,208
+2015,Murder,24
+2015,Neglect and ill-treatment of children,2
+2015,Public violence,0
+2015,Rape,29
+2015,Robbery at non-residential premises,55
+2015,Robbery at residential premises,67
+2015,Robbery of cash in transit,0
+2015,Robbery with aggravating circumstances,315
+2015,Sexual Offences detected as a result of police action,7
+2015,Sexual assault,10
+2015,Shoplifting,52
+2015,Stock-theft,0
+2015,Street Robbery,146
+2015,TRIO crimes,164
+2015,Theft of motor vehicle and motorcycle,350
+2015,Theft out of or from motor vehicle,285
+2015,Truck hijacking,5
+2014,Arson,12
+2014,Assault with the intent to inflict grievous bodily harm,161
+2014,Attempted murder,16
+2014,Attempted sexual offences,2
+2014,Bank robbery,0
+2014,Burglary at non-residential premises,144
+2014,Burglary at residential premises,395
+2014,Carjacking,73
+2014,Commercial crime,218
+2014,Common assault,223
+2014,Common robbery,86
+2014,Contact sexual offences,3
+2014,Crimen Injuria,26
+2014,Culpable homicide,20
+2014,Driving under the influence of alcohol or drugs,110
+2014,Drug-related crime,322
+2014,Illegal possession of firearms and ammunition,9
+2014,Kidnapping,3
+2014,Malicious damage to property,222
+2014,Murder,16
+2014,Neglect and ill-treatment of children,0
+2014,Public violence,0
+2014,Rape,26
+2014,Robbery at non-residential premises,58
+2014,Robbery at residential premises,56
+2014,Robbery of cash in transit,0
+2014,Robbery with aggravating circumstances,328
+2014,Sexual Offences detected as a result of police action,4
+2014,Sexual assault,10
+2014,Shoplifting,69
+2014,Stock-theft,0
+2014,Street Robbery,136
+2014,TRIO crimes,187
+2014,Theft of motor vehicle and motorcycle,313
+2014,Theft out of or from motor vehicle,238
+2014,Truck hijacking,5
+2013,Arson,1
+2013,Assault with the intent to inflict grievous bodily harm,136
+2013,Attempted murder,17
+2013,Attempted sexual offences,0
+2013,Bank robbery,0
+2013,Burglary at non-residential premises,114
+2013,Burglary at residential premises,376
+2013,Carjacking,77
+2013,Commercial crime,198
+2013,Common assault,202
+2013,Common robbery,105
+2013,Contact sexual offences,3
+2013,Crimen Injuria,32
+2013,Culpable homicide,20
+2013,Driving under the influence of alcohol or drugs,100
+2013,Drug-related crime,148
+2013,Illegal possession of firearms and ammunition,11
+2013,Kidnapping,3
+2013,Malicious damage to property,227
+2013,Murder,14
+2013,Neglect and ill-treatment of children,1
+2013,Public violence,0
+2013,Rape,30
+2013,Robbery at non-residential premises,53
+2013,Robbery at residential premises,38
+2013,Robbery of cash in transit,0
+2013,Robbery with aggravating circumstances,272
+2013,Sexual Offences detected as a result of police action,9
+2013,Sexual assault,8
+2013,Shoplifting,73
+2013,Stock-theft,1
+2013,Street Robbery,103
+2013,TRIO crimes,168
+2013,Theft of motor vehicle and motorcycle,319
+2013,Theft out of or from motor vehicle,314
+2013,Truck hijacking,1
+2012,Arson,6
+2012,Assault with the intent to inflict grievous bodily harm,124
+2012,Attempted murder,11
+2012,Attempted sexual offences,1
+2012,Bank robbery,0
+2012,Burglary at non-residential premises,109
+2012,Burglary at residential premises,364
+2012,Carjacking,54
+2012,Commercial crime,209
+2012,Common assault,219
+2012,Common robbery,102
+2012,Contact sexual offences,3
+2012,Crimen Injuria,23
+2012,Culpable homicide,9
+2012,Driving under the influence of alcohol or drugs,37
+2012,Drug-related crime,75
+2012,Illegal possession of firearms and ammunition,7
+2012,Kidnapping,1
+2012,Malicious damage to property,263
+2012,Murder,14
+2012,Neglect and ill-treatment of children,1
+2012,Public violence,0
+2012,Rape,25
+2012,Robbery at non-residential premises,32
+2012,Robbery at residential premises,20
+2012,Robbery of cash in transit,1
+2012,Robbery with aggravating circumstances,189
+2012,Sexual Offences detected as a result of police action,5
+2012,Sexual assault,11
+2012,Shoplifting,104
+2012,Stock-theft,0
+2012,Street Robbery,80
+2012,TRIO crimes,106
+2012,Theft of motor vehicle and motorcycle,334
+2012,Theft out of or from motor vehicle,336
+2012,Truck hijacking,2
+2011,Arson,4
+2011,Assault with the intent to inflict grievous bodily harm,147
+2011,Attempted murder,21
+2011,Attempted sexual offences,3
+2011,Bank robbery,0
+2011,Burglary at non-residential premises,108
+2011,Burglary at residential premises,341
+2011,Carjacking,71
+2011,Commercial crime,280
+2011,Common assault,244
+2011,Common robbery,107
+2011,Contact sexual offences,10
+2011,Crimen Injuria,41
+2011,Culpable homicide,12
+2011,Driving under the influence of alcohol or drugs,25
+2011,Drug-related crime,53
+2011,Illegal possession of firearms and ammunition,11
+2011,Kidnapping,3
+2011,Malicious damage to property,259
+2011,Murder,15
+2011,Neglect and ill-treatment of children,1
+2011,Public violence,0
+2011,Rape,31
+2011,Robbery at non-residential premises,36
+2011,Robbery at residential premises,36
+2011,Robbery of cash in transit,0
+2011,Robbery with aggravating circumstances,267
+2011,Sexual Offences detected as a result of police action,0
+2011,Sexual assault,3
+2011,Shoplifting,108
+2011,Stock-theft,0
+2011,Street Robbery,119
+2011,TRIO crimes,143
+2011,Theft of motor vehicle and motorcycle,418
+2011,Theft out of or from motor vehicle,335
+2011,Truck hijacking,5
+2010,Arson,6
+2010,Assault with the intent to inflict grievous bodily harm,186
+2010,Attempted murder,18
+2010,Attempted sexual offences,4
+2010,Bank robbery,4
+2010,Burglary at non-residential premises,132
+2010,Burglary at residential premises,483
+2010,Carjacking,135
+2010,Commercial crime,312
+2010,Common assault,257
+2010,Common robbery,120
+2010,Contact sexual offences,15
+2010,Crimen Injuria,32
+2010,Culpable homicide,27
+2010,Driving under the influence of alcohol or drugs,25
+2010,Drug-related crime,42
+2010,Illegal possession of firearms and ammunition,11
+2010,Kidnapping,0
+2010,Malicious damage to property,249
+2010,Murder,17
+2010,Neglect and ill-treatment of children,2
+2010,Public violence,0
+2010,Rape,43
+2010,Robbery at non-residential premises,44
+2010,Robbery at residential premises,52
+2010,Robbery of cash in transit,2
+2010,Robbery with aggravating circumstances,343
+2010,Sexual Offences detected as a result of police action,0
+2010,Sexual assault,3
+2010,Shoplifting,112
+2010,Stock-theft,0
+2010,Street Robbery,94
+2010,TRIO crimes,231
+2010,Theft of motor vehicle and motorcycle,447
+2010,Theft out of or from motor vehicle,389
+2010,Truck hijacking,12
+2009,Arson,8
+2009,Assault with the intent to inflict grievous bodily harm,187
+2009,Attempted murder,18
+2009,Attempted sexual offences,3
+2009,Bank robbery,1
+2009,Burglary at non-residential premises,112
+2009,Burglary at residential premises,317
+2009,Carjacking,135
+2009,Commercial crime,215
+2009,Common assault,270
+2009,Common robbery,153
+2009,Contact sexual offences,45
+2009,Crimen Injuria,30
+2009,Culpable homicide,28
+2009,Driving under the influence of alcohol or drugs,47
+2009,Drug-related crime,28
+2009,Illegal possession of firearms and ammunition,15
+2009,Kidnapping,6
+2009,Malicious damage to property,290
+2009,Murder,15
+2009,Neglect and ill-treatment of children,4
+2009,Public violence,0
+2009,Rape,46
+2009,Robbery at non-residential premises,56
+2009,Robbery at residential premises,30
+2009,Robbery of cash in transit,0
+2009,Robbery with aggravating circumstances,387
+2009,Sexual Offences detected as a result of police action,0
+2009,Sexual assault,7
+2009,Shoplifting,131
+2009,Stock-theft,0
+2009,Street Robbery,161
+2009,TRIO crimes,221
+2009,Theft of motor vehicle and motorcycle,480
+2009,Theft out of or from motor vehicle,388
+2009,Truck hijacking,4
+2008,Arson,7
+2008,Assault with the intent to inflict grievous bodily harm,181
+2008,Attempted murder,24
+2008,Attempted sexual offences,0
+2008,Bank robbery,0
+2008,Burglary at non-residential premises,129
+2008,Burglary at residential premises,348
+2008,Carjacking,142
+2008,Commercial crime,196
+2008,Common assault,278
+2008,Common robbery,140
+2008,Contact sexual offences,0
+2008,Crimen Injuria,39
+2008,Culpable homicide,22
+2008,Driving under the influence of alcohol or drugs,37
+2008,Drug-related crime,39
+2008,Illegal possession of firearms and ammunition,13
+2008,Kidnapping,5
+2008,Malicious damage to property,245
+2008,Murder,17
+2008,Neglect and ill-treatment of children,2
+2008,Public violence,0
+2008,Rape,0
+2008,Robbery at non-residential premises,41
+2008,Robbery at residential premises,25
+2008,Robbery of cash in transit,0
+2008,Robbery with aggravating circumstances,367
+2008,Sexual Offences detected as a result of police action,0
+2008,Sexual assault,0
+2008,Shoplifting,101
+2008,Stock-theft,0
+2008,Street Robbery,157
+2008,TRIO crimes,208
+2008,Theft of motor vehicle and motorcycle,468
+2008,Theft out of or from motor vehicle,433
+2008,Truck hijacking,2
+2007,Arson,14
+2007,Assault with the intent to inflict grievous bodily harm,242
+2007,Attempted murder,42
+2007,Attempted sexual offences,0
+2007,Bank robbery,0
+2007,Burglary at non-residential premises,159
+2007,Burglary at residential premises,353
+2007,Carjacking,80
+2007,Commercial crime,175
+2007,Common assault,242
+2007,Common robbery,137
+2007,Contact sexual offences,0
+2007,Crimen Injuria,41
+2007,Culpable homicide,19
+2007,Driving under the influence of alcohol or drugs,23
+2007,Drug-related crime,71
+2007,Illegal possession of firearms and ammunition,27
+2007,Kidnapping,6
+2007,Malicious damage to property,200
+2007,Murder,25
+2007,Neglect and ill-treatment of children,0
+2007,Public violence,0
+2007,Rape,0
+2007,Robbery at non-residential premises,37
+2007,Robbery at residential premises,63
+2007,Robbery of cash in transit,0
+2007,Robbery with aggravating circumstances,375
+2007,Sexual Offences detected as a result of police action,0
+2007,Sexual assault,0
+2007,Shoplifting,114
+2007,Stock-theft,0
+2007,Street Robbery,190
+2007,TRIO crimes,180
+2007,Theft of motor vehicle and motorcycle,397
+2007,Theft out of or from motor vehicle,434
+2007,Truck hijacking,5
+2006,Arson,10
+2006,Assault with the intent to inflict grievous bodily harm,262
+2006,Attempted murder,39
+2006,Attempted sexual offences,0
+2006,Bank robbery,0
+2006,Burglary at non-residential premises,125
+2006,Burglary at residential premises,337
+2006,Carjacking,90
+2006,Commercial crime,144
+2006,Common assault,275
+2006,Common robbery,111
+2006,Contact sexual offences,0
+2006,Crimen Injuria,51
+2006,Culpable homicide,24
+2006,Driving under the influence of alcohol or drugs,47
+2006,Drug-related crime,54
+2006,Illegal possession of firearms and ammunition,23
+2006,Kidnapping,3
+2006,Malicious damage to property,193
+2006,Murder,34
+2006,Neglect and ill-treatment of children,6
+2006,Public violence,0
+2006,Rape,0
+2006,Robbery at non-residential premises,26
+2006,Robbery at residential premises,40
+2006,Robbery of cash in transit,0
+2006,Robbery with aggravating circumstances,321
+2006,Sexual Offences detected as a result of police action,0
+2006,Sexual assault,0
+2006,Shoplifting,107
+2006,Stock-theft,0
+2006,Street Robbery,165
+2006,TRIO crimes,156
+2006,Theft of motor vehicle and motorcycle,435
+2006,Theft out of or from motor vehicle,370
+2006,Truck hijacking,0
