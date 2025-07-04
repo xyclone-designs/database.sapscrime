@@ -174,8 +174,8 @@ namespace Database.SAPSCrime
 
 					}).Select(_ => new Category { Name = _ }), out int _).Commit();
 
-				IEnumerable<Record> records = sqliteconnection.InsertAllAndReturn(
-					objs: csvrows.GroupBy(_ => _.Year).Select(_ => new Record
+				sqliteconnection.InsertAll(
+					objects : csvrows.GroupBy(_ => _.Year).Select(_ => new Record
 					{
 						Year = _.Key,
 						PkPoliceStation = policestation.Pk,
@@ -187,12 +187,8 @@ namespace Database.SAPSCrime
 
 							return string.Format("{0}:{1}", category.Pk, _.Value);
 						})),
-					}));
 
-				policestation.List_PkRecord = string.Join(',', records.Select(_ => _.Pk));
-
-				sqliteconnection.Update(policestation);
-				sqliteconnection.Commit();
+					}), out int _).Commit();
 			}
 
 			sqliteconnection.Close();
@@ -202,6 +198,7 @@ namespace Database.SAPSCrime
 
 			FileInfo fileinfo = new(sqlconnectionpath);
 			FileInfo fileinfo_districts = new(sqlconnectionpath_districts);
+			FileInfo fileinfo_municipalities = new(sqlconnectionpath_municipalities);
 
 			string fileinfozipfile = fileinfo.ZipFile().Split('\\').Last();
 			string fileinfogzipfile = fileinfo.GZipFile().Split('\\').Last();
@@ -209,10 +206,15 @@ namespace Database.SAPSCrime
 			string fileinfo_districtszipfile = fileinfo_districts.ZipFile().Split('\\').Last();
 			string fileinfo_districtsgzipfile = fileinfo_districts.GZipFile().Split('\\').Last();
 
+			string fileinfo_municipalitieszipfile = fileinfo_municipalities.ZipFile().Split('\\').Last();
+			string fileinfo_municipalitiesgzipfile = fileinfo_municipalities.GZipFile().Split('\\').Last();
+
 			apifiles.Add(fileinfozipfile, "SAPS crime stats");
 			apifiles.Add(fileinfogzipfile, "SAPS crime stats");
 
 			fileinfo.Delete();
+			fileinfo_districts.Delete();
+			fileinfo_municipalities.Delete();
 
 			string apifilesjson = apifiles.ToString();
 			string apifilespath = Path.Combine(DirectoryOutputs, "index.json");
