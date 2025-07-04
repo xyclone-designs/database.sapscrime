@@ -9,6 +9,7 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 
 using XycloneDesigns.Apis.General.Tables;
@@ -18,8 +19,8 @@ namespace Database.SAPSCrime
 {
 	internal partial class Program
 	{
-		static readonly string DirectoryCurrent = Directory.GetCurrentDirectory();
-		//static readonly string DirectoryCurrent = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName!;
+		//static readonly string DirectoryCurrent = Directory.GetCurrentDirectory();
+		static readonly string DirectoryCurrent = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName!;
 
 		static readonly string DirectoryTemp = Path.Combine(DirectoryCurrent, ".temp");
 		static readonly string DirectoryInput = Path.Combine(DirectoryCurrent, ".inputs");
@@ -34,6 +35,7 @@ namespace Database.SAPSCrime
 		static readonly string DirectoryInputData_NorthWest = Path.Combine(DirectoryInputData, "north-west");
 		static readonly string DirectoryInputData_NorthernCape = Path.Combine(DirectoryInputData, "northern-cape");
 		static readonly string DirectoryInputData_WesternCape = Path.Combine(DirectoryInputData, "western-cape");
+		static readonly string DirectoryInputJsons = Path.Combine(DirectoryInput, "jsons");
 
 		static readonly string DirectoryOutputs = Path.Combine(DirectoryCurrent, ".outputs");
 
@@ -53,26 +55,58 @@ namespace Database.SAPSCrime
 		{
 			_CleaningPre();
 
-			string sqlconnectionpath_districts = Path.Combine(DirectoryInputDatabases, "districts.db");
-			string sqlconnectionpath_municipalities = Path.Combine(DirectoryInputDatabases, "municipalities.db");
-			string sqlconnectionpath_provinces = Path.Combine(DirectoryInputDatabases, "provinces.db");
+			using FileStream filestream_districts = File.OpenRead(Path.Combine(DirectoryInputDatabases, "districts.db.zip"));
+			using FileStream filestream_municipalities = File.OpenRead(Path.Combine(DirectoryInputDatabases, "municipalities.db.zip"));
+			using FileStream filestream_provinces = File.OpenRead(Path.Combine(DirectoryInputDatabases, "provinces.db.zip"));
+
+			new ZipArchive(filestream_districts).ExtractToDirectory(DirectoryOutputs);
+			new ZipArchive(filestream_municipalities).ExtractToDirectory(DirectoryOutputs);
+			new ZipArchive(filestream_provinces).ExtractToDirectory(DirectoryTemp);
+
 			string sqlconnectionpath = Path.Combine(DirectoryOutputs, "sapscrime.db");
+			string sqlconnectionpath_districts = Path.Combine(DirectoryOutputs, "districts.db");
+			string sqlconnectionpath_municipalities = Path.Combine(DirectoryOutputs, "municipalities.db");
+			string sqlconnectionpath_provinces = Path.Combine(DirectoryTemp, "provinces.db");
 
 			JArray apifiles = [];
-			StreamWriters streamwriters = [];
 			SQLiteConnection sqliteconnection = _SQLiteConnection(sqlconnectionpath);
-			SQLiteConnection sqliteconnection_districts = new (sqlconnectionpath_districts);
-			SQLiteConnection sqliteconnection_municipalities = new (sqlconnectionpath_municipalities);
-			SQLiteConnection sqliteconnection_provinces = new (sqlconnectionpath_provinces);
+			SQLiteConnection sqliteconnection_districts = new(sqlconnectionpath_districts);
+			SQLiteConnection sqliteconnection_municipalities = new(sqlconnectionpath_municipalities);
+			SQLiteConnection sqliteconnection_provinces = new(sqlconnectionpath_provinces);
+
+			List<District> districts = JsonDistricts()
+				.Where(_ =>
+				{
+					return sqliteconnection_districts
+						.TableEnumerable<District>()
+						.Any(__ =>
+						{
+							return string.Equals(_.Code, __.Code, StringComparison.OrdinalIgnoreCase);
+
+						}) is false;
+
+				}).DistinctBy(_ => _.Code).ToList(); sqliteconnection_districts.InsertAll(districts, out int _).Commit();
+			List<Municipality> municipalities = JsonMunicipalities()
+				.Where(_ =>
+				{
+					return sqliteconnection_municipalities
+						.TableEnumerable<Municipality>()
+						.Any(__ =>
+						{
+							return string.Equals(_.GeoCode, __.GeoCode, StringComparison.OrdinalIgnoreCase);
+
+						}) is false;
+
+				}).DistinctBy(_ => _.GeoCode).ToList(); sqliteconnection_municipalities.InsertAll(municipalities, out int _).Commit();
 
 			foreach (string csvfilepath in AllDirectories(
 			[
-				// .. Directory.EnumerateDirectories(DirectoryInputData_EasternCape),
-				// .. Directory.EnumerateDirectories(DirectoryInputData_FreeState),
-				// .. Directory.EnumerateDirectories(DirectoryInputData_KwaZuluNatal),
-				// .. Directory.EnumerateDirectories(DirectoryInputData_Gauteng),
-				// .. Directory.EnumerateDirectories(DirectoryInputData_Limpopo),
-				// .. Directory.EnumerateDirectories(DirectoryInputData_Mpumalanga),
+				.. Directory.EnumerateDirectories(DirectoryInputData_EasternCape),
+				.. Directory.EnumerateDirectories(DirectoryInputData_FreeState),
+				.. Directory.EnumerateDirectories(DirectoryInputData_KwaZuluNatal),
+				.. Directory.EnumerateDirectories(DirectoryInputData_Gauteng),
+				.. Directory.EnumerateDirectories(DirectoryInputData_Limpopo),
+				.. Directory.EnumerateDirectories(DirectoryInputData_Mpumalanga),
 				.. Directory.EnumerateDirectories(DirectoryInputData_NorthWest),
 				.. Directory.EnumerateDirectories(DirectoryInputData_NorthernCape),
 				.. Directory.EnumerateDirectories(DirectoryInputData_WesternCape),
@@ -80,45 +114,48 @@ namespace Database.SAPSCrime
 			]).SelectMany(_ => Directory.EnumerateFiles(_)))
 			{
 				string[] names = csvfilepath.Split('\\', '.')[^5..^1];
-				string policestationname = names[3], municipalityname = names[2], districtname = names[1], provincename = names[0];
+				string 
+					policestationname = names[3], 
+					municipalityname = names[2], 
+					districtname = names[1], 
+					provincename = names[0];
 
-				Console.WriteLine("Province: {0}, District: {1}, Municipality: {2}, Station: {3}", provincename, districtname, municipalityname, policestationname);
+				string cleanmunicipalityname = CleanMuniciapility(municipalityname); 
+				string cleandistrictname = CleanDistrict(districtname); 
+				string cleanprovincename = CleanProvince(provincename);
+
+				Console.WriteLine("Province: {0}, District: {1}, Municipality: {2}, Station: {3}", cleanprovincename, cleandistrictname, cleanmunicipalityname, policestationname);
 
 				using FileStream csvfilestream = File.OpenRead(csvfilepath);
 				using StreamReader csvstreamreader = new (csvfilestream);
 
-				District? district = sqliteconnection_districts
+				District district = sqliteconnection_districts
 					.Table<District>()
 					.AsEnumerable()
-					.FirstOrDefault(_ => string.Equals(_.Name, districtname, StringComparison.OrdinalIgnoreCase));
-				Municipality? municipality = sqliteconnection_municipalities
+					.FirstOrDefault(_ => cleandistrictname.Equals(_.Name, StringComparison.OrdinalIgnoreCase)) ??
+					sqliteconnection_districts.InsertAndReturn(new District
+					{
+						Name = cleandistrictname
+					});
+				Municipality municipality = sqliteconnection_municipalities
 					.Table<Municipality>()
 					.AsEnumerable()
-					.FirstOrDefault(_ => string.Equals(_.Name, municipalityname, StringComparison.OrdinalIgnoreCase));
-				Province? province = sqliteconnection_provinces
+					.FirstOrDefault(_ => string.Equals(_.Name, cleanmunicipalityname, StringComparison.OrdinalIgnoreCase)) ??
+					sqliteconnection_municipalities.InsertAndReturn(new Municipality
+					{
+						Name = cleanmunicipalityname
+					});
+				Province province = sqliteconnection_provinces
 					.Table<Province>()
 					.AsEnumerable()
-					.FirstOrDefault(_ => string.Equals(_.Name, provincename, StringComparison.OrdinalIgnoreCase));
+					.First(_ => string.Equals(_.Name, cleanprovincename, StringComparison.OrdinalIgnoreCase));
 
 				PoliceStation policestation = sqliteconnection.InsertAndReturn(new PoliceStation
 				{
 					Name = policestationname,
-					PkDistrict = district?.Pk,
-					PkMunicipality = municipality?.Pk,
-					PkProvince = provincename switch
-					{
-						"eastern-cape" => 1,
-						"free-state" => 2,
-						"gauteng" => 3,
-						"kwazulu-natal" => 4,
-						"limpopo" => 5,
-						"mpumalanga" => 6,
-						"northern-cape" => 7,
-						"north-west" => 8,
-						"western-cape" => 9,
-
-						_ => throw new ArgumentException()
-					},
+					PkDistrict = district.Pk,
+					PkMunicipality = municipality.Pk,
+					PkProvince = province.Pk,
 				});
 
 				List<CSVRow> csvrows = [];
@@ -127,8 +164,7 @@ namespace Database.SAPSCrime
 					while (csvstreamreader.ReadLine() is string line)
 						csvrows.Add(new CSVRow(line));
 
-				sqliteconnection.InsertAll(
-					objects: csvrows
+				sqliteconnection.InsertAll(csvrows
 					.Select(_ => _.Category)
 					.Where(_ =>
 					{
@@ -136,8 +172,7 @@ namespace Database.SAPSCrime
 							.Table<Category>()
 							.Any(__ => _ == __.Name) is false;
 
-					}).Select(_ => new Category { Name = _ }));
-				sqliteconnection.Commit();
+					}).Select(_ => new Category { Name = _ }), out int _).Commit();
 
 				IEnumerable<Record> records = sqliteconnection.InsertAllAndReturn(
 					objs: csvrows.GroupBy(_ => _.Year).Select(_ => new Record
@@ -161,11 +196,18 @@ namespace Database.SAPSCrime
 			}
 
 			sqliteconnection.Close();
+			sqliteconnection_districts.Close();
+			sqliteconnection_municipalities.Close();
+			sqliteconnection_provinces.Close();
 
 			FileInfo fileinfo = new(sqlconnectionpath);
+			FileInfo fileinfo_districts = new(sqlconnectionpath_districts);
 
 			string fileinfozipfile = fileinfo.ZipFile().Split('\\').Last();
 			string fileinfogzipfile = fileinfo.GZipFile().Split('\\').Last();
+
+			string fileinfo_districtszipfile = fileinfo_districts.ZipFile().Split('\\').Last();
+			string fileinfo_districtsgzipfile = fileinfo_districts.GZipFile().Split('\\').Last();
 
 			apifiles.Add(fileinfozipfile, "SAPS crime stats");
 			apifiles.Add(fileinfogzipfile, "SAPS crime stats");
